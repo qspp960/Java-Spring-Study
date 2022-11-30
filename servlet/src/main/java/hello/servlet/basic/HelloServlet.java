@@ -13,6 +13,7 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        String username = req.getParameter("username");
+        System.out.println("username = " + username);
     }
 }
