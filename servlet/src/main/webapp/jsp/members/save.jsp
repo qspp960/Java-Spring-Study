@@ -6,8 +6,8 @@
     MemberRepository memberRepository = MemberRepository.getInstance();
 
     System.out.println("MemberSaveServlet.service");
-    String username = req.getParameter("username");
-    int age = Integer.parseInt(req.getParameter("age"));
+    String username = request.getParameter("username");
+    int age = Integer.parseInt(request.getParameter("age"));
 
     Member member = new Member(username,age);
     memberRepository.save(member);
@@ -26,5 +26,5 @@
     <li>id=<%=member.getAge()%></li>
 </ul>
 <a href="/index.html">메인</a>
-<body>
+</body>
 </html>
